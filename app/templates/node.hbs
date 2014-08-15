@@ -1,0 +1,16 @@
+<h1>{{name}}</h1>
+<section>
+  {{#if parent}}
+    Parent: 
+    {{#link-to 'node' parent}}{{parent.name}}{{/link-to}}
+  {{else}}
+    {{#link-to 'nodes.index'}}Top Level{{/link-to}}
+  {{/if}}
+</section>
+
+<h3>Children</h3>
+{{#each child in children}}
+  {{#link-to 'node' child}}
+    <div class="node">{{child.name}}</div>
+  {{/link-to}}
+{{/each}}

@@ -1,0 +1,7 @@
+<h1>Top level nodes</h1>
+
+{{#each node in content}}
+  {{#link-to 'node' node}}
+    <div class="node">{{node.name}}</div>
+  {{/link-to}}
+{{/each}}
