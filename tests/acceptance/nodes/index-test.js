@@ -12,7 +12,26 @@ module('Acceptance: NodesIndex', {
   }
 });
 
-test('visiting /nodes/index', function() {
+test('visit /', function() {
+  visit('/');
+
+  andThen(function() {
+    equal(currentPath(), 'nodes.index');
+    equal(find('.node:first').text(), 'a');
+  });
+});
+
+test('navigate once', function() {
+  visit('/');
+  click('.node:first');
+
+  andThen(function() {
+    equal(find('h1').text(), 'a');
+    click('.node:first');
+  });
+});
+
+test('navigate twice', function() {
   visit('/');
   click('.node:first');
 
@@ -25,8 +44,5 @@ test('visiting /nodes/index', function() {
     equal(find('h1').text(), 'a.a');
     click('.node:first');
   });
-
-  andThen(function() {
-    equal(find('h1').text(), 'a.a.a');
-  });
 });
+
