@@ -1,7 +1,6 @@
 import DS from 'ember-data';
 
 var NodeModel = DS.Model.extend({
-  type: DS.attr('object'),
   name: DS.attr('string'),
   children: DS.hasMany('node', { async: true })
 });

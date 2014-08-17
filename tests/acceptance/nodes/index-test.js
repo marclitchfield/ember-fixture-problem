@@ -16,31 +16,23 @@ test('visit /', function() {
   visit('/');
 
   andThen(function() {
+    console.log('Test visit/ andThen');
     equal(currentPath(), 'nodes.index');
     equal(find('.node:first').text(), 'a');
   });
 });
 
-// test('navigate once', function() {
-//   visit('/');
-//   click('.node:first');
-
-//   andThen(function() {
-//     equal(find('h1').text(), 'a');
-//   });
-// });
-
-test('navigate twice', function() {
+test('navigate', function() {
   visit('/');
-  click('.node:first');
-
   andThen(function() {
-    equal(find('h1').text(), 'a');
+    equal(find('.node:first').text(), 'a');
     click('.node:first');
   });
 
   andThen(function() {
-    equal(find('h1').text(), 'a.a');
+    console.log('Navigated to node page');
+    equal(find('h1').text(), 'a');
+    equal(find('.node:first').text(), 'a.a');  // This assertion fails 50% of the time.
   });
 });
 
