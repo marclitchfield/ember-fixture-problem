@@ -1,8 +1,9 @@
 /* global require */
 
-var Application = require('hello-skeleton/app')['default'];
-var Router = require('hello-skeleton/router')['default'];
+var Application = require('ember-fixture-problem/app')['default'];
+var Router = require('ember-fixture-problem/router')['default'];
 import Ember from 'ember';
+import DS from 'ember-data';
 
 export default function startApp(attrs) {
   var App;
@@ -24,7 +25,8 @@ export default function startApp(attrs) {
     App.injectTestHelpers();
   });
 
-  App.reset(); // this shouldn't be needed, i want to be able to "start an app at a specific URL"
-
+  App.reset();
+  
   return App;
 }
+

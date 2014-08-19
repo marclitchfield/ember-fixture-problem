@@ -3,24 +3,24 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>HelloSkeleton</title>
+    <title>EmberFixtureProblem</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     {{BASE_TAG}}
 
     <link rel="stylesheet" href="assets/vendor.css">
-    <link rel="stylesheet" href="assets/hello-skeleton.css">
+    <link rel="stylesheet" href="assets/ember-fixture-problem.css">
   </head>
   <body>
     <script>
-      window.HelloSkeletonENV = {{ENV}};
-      window.EmberENV = window.HelloSkeletonENV.EmberENV;
+      window.EmberFixtureProblemENV = {{ENV}};
+      window.EmberENV = window.EmberFixtureProblemENV.EmberENV;
     </script>
     <script src="assets/vendor.js"></script>
-    <script src="assets/hello-skeleton.js"></script>
+    <script src="assets/ember-fixture-problem.js"></script>
     <script>
-      window.HelloSkeleton = require('hello-skeleton/app')['default'].create(HelloSkeletonENV.APP);
+      window.EmberFixtureProblem = require('ember-fixture-problem/app')['default'].create(EmberFixtureProblemENV.APP);
     </script>
   </body>
 </html>

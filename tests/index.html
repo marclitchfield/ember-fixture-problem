@@ -3,14 +3,14 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>HelloSkeleton Tests</title>
+    <title>EmberFixtureProblem Tests</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     {{BASE_TAG}}
 
     <link rel="stylesheet" href="assets/vendor.css">
-    <link rel="stylesheet" href="assets/hello-skeleton.css">
+    <link rel="stylesheet" href="assets/ember-fixture-problem.css">
     <link rel="stylesheet" href="assets/test-support.css">
     <style>
       #ember-testing-container {
@@ -34,15 +34,15 @@
     <div id="qunit-fixture"></div>
 
     <script>
-      window.HelloSkeletonENV = {{ENV}};
-      window.EmberENV = window.HelloSkeletonENV.EmberENV;
+      window.EmberFixtureProblemENV = {{ENV}};
+      window.EmberENV = window.EmberFixtureProblemENV.EmberENV;
     </script>
     <script src="assets/test-support.js"></script>
     <script src="assets/vendor.js"></script>
-    <script src="assets/hello-skeleton.js"></script>
+    <script src="assets/ember-fixture-problem.js"></script>
     <script src="testem.js"></script>
     <script>
-      require('hello-skeleton/tests/test-helper');
+      require('ember-fixture-problem/tests/test-helper');
     </script>
     <script src="assets/test-loader.js"></script>
   </body>

@@ -3,7 +3,7 @@ import Resolver from 'ember/resolver';
 var resolver = Resolver.create();
 
 resolver.namespace = {
-  modulePrefix: 'hello-skeleton'
+  modulePrefix: 'ember-fixture-problem'
 };
 
 export default resolver;

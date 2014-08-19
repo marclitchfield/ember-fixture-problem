@@ -8,6 +8,10 @@ module('Acceptance: NodesIndex', {
     App = startApp();
   },
   teardown: function() {
+    App.__container__.lookup('data-adapter:main').getModelTypes().forEach(function(type) {
+        type.FIXTURES = [];
+    });
+
     Ember.run(App, 'destroy');
   }
 });
